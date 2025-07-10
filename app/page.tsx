@@ -1,8 +1,10 @@
-import HeroSlider from "./components/HeroSlider";
+import HeroSlider from './components/HeroSlider';
+import Testimonials from './components/Testimonials';
+import ScrollToTop from './components/ScrollToTop';
 
 export default function HomePage() {
   return (
-    <div>
+    <>
       <HeroSlider />
 
       <section id="about" className="home-section about">
@@ -61,24 +63,25 @@ export default function HomePage() {
       </section>
 
       <section id="events" className="home-section events">
-        <div className="section-inner">
-          <h2>Upcoming Events</h2>
-          <div className="event-cards">
-            <div className="event-card">
-              <h3>📅 July 15</h3>
-              <p>Orientation Day for New Students</p>
-            </div>
-            <div className="event-card">
-              <h3>🎓 July 25</h3>
-              <p>Midterm Parent-Teacher Meeting</p>
-            </div>
-            <div className="event-card">
-              <h3>🏅 August 1</h3>
-              <p>Inter-house Sports Competition</p>
-            </div>
+        <h2>Upcoming Events</h2>
+        <div className="event-cards">
+          <div className="event-card fade-in">
+            <h3>📅 July 15</h3>
+            <p>Orientation Day for New Students</p>
+          </div>
+          <div className="event-card fade-in">
+            <h3>🎓 July 25</h3>
+            <p>Midterm Parent-Teacher Meeting</p>
+          </div>
+          <div className="event-card fade-in">
+            <h3>🏅 August 1</h3>
+            <p>Inter-house Sports Competition</p>
           </div>
         </div>
       </section>
-    </div>
+
+      <Testimonials />
+      <ScrollToTop />
+    </>
   );
 }
