@@ -1,37 +1,174 @@
+/* Section base styling */
 .home-section {
-  padding: 4rem 2rem;
+  padding: 5rem 2rem;
   text-align: center;
 }
 
+/* Title style */
 .home-section h2 {
-  font-size: 2rem;
-  margin-bottom: 1rem;
+  font-size: 2.2rem;
+  margin-bottom: 2rem;
+  color: #004e92;
 }
 
-.home-section.about,
-.home-section.testimonials {
+/* EVENTS SECTION */
+.events {
   background: #f9f9f9;
 }
 
-.home-section ul {
-  list-style: none;
-  padding: 0;
+.event-cards {
+  display: flex;
+  gap: 1.5rem;
+  justify-content: center;
+  flex-wrap: wrap;
 }
 
-.home-section li {
-  margin: 0.5rem 0;
+.event-card {
+  background: white;
+  padding: 1.5rem;
+  border-radius: 10px;
+  width: 250px;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.event-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
 }
 
-blockquote {
-  font-size: 1.2rem;
-  font-style: italic;
-  margin: 1rem auto;
-  max-width: 600px;
+.event-card h3 {
+  font-size: 1.4rem;
+  color: #004e92;
 }
 
-cite {
-  display: block;
+.event-card p {
   margin-top: 0.5rem;
-  font-weight: bold;
-  color: #555;
+  color: #333;
+}
+
+/* Responsive layout */
+@media (max-width: 768px) {
+  .section-inner {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .about .text {
+    text-align: center;
+  }
+}
+
+
+.about {
+  background: linear-gradient(to right, #f0f4ff, #ffffff);
+}
+
+.about-inner {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 2rem;
+  max-width: 1200px;
+  margin: auto;
+  padding: 0 1rem;
+}
+
+.about-text {
+  flex: 1 1 450px;
+  min-width: 280px;
+}
+
+.about-text h2 {
+  font-size: 2.2rem;
+  margin-bottom: 1rem;
+  color: #004e92;
+}
+
+.about-text p {
+  font-size: 1.1rem;
+  color: #333;
+  line-height: 1.6;
+  margin-bottom: 2rem;
+}
+
+.about-cards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.about-card {
+  background: white;
+  padding: 1rem 1.2rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.08);
+  flex: 1 1 200px;
+  min-width: 200px;
+  max-width: 280px;
+}
+
+.about-card h3 {
+  margin-bottom: 0.5rem;
+  color: #004e92;
+  font-size: 1.2rem;
+}
+
+.about-card p {
+  font-size: 0.95rem;
+  color: #444;
+}
+
+/* Map styling */
+.about-map {
+  flex: 1 1 400px;
+  min-width: 280px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+
+.about-map iframe {
+  width: 100%;
+  max-width: 480px;
+  height: 350px;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* Get Directions button */
+.directions-btn {
+  margin-top: 0.5rem;
+  background: #00eaff;
+  color: #000;
+  padding: 0.7rem 1.2rem;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 500;
+  transition: background 0.3s;
+}
+.directions-btn:hover {
+  background: #00cfe6;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .about-inner {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .about-text {
+    order: 1;
+  }
+
+  .about-map {
+    order: 2;
+  }
+
+  .about-cards {
+    justify-content: center;
+  }
 }
