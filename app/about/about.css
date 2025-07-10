@@ -1,0 +1,109 @@
+/* Reuse previous styles... */
+
+.principal {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 2rem;
+  margin: 4rem 0;
+}
+
+.principal-image img {
+  max-width: 280px;
+  border-radius: 12px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+}
+
+.principal-text {
+  flex: 1;
+}
+
+.principal-text h2 {
+  color: #004e92;
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+}
+
+.team {
+  margin: 4rem 0;
+  text-align: center;
+}
+
+.team h2 {
+  font-size: 2rem;
+  color: #004e92;
+  margin-bottom: 2rem;
+}
+
+.team-members {
+  display: flex;
+  gap: 1.5rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.member {
+  background: #fff;
+  padding: 1rem;
+  border-radius: 10px;
+  width: 200px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  text-align: center;
+}
+
+.member img {
+  width: 100%;
+  border-radius: 8px;
+  margin-bottom: 0.5rem;
+}
+
+.member h4 {
+  margin: 0.5rem 0 0.2rem;
+  color: #004e92;
+}
+
+.member p {
+  font-size: 0.9rem;
+  color: #666;
+}
+
+.gallery {
+  margin: 4rem 0;
+}
+
+.gallery h2 {
+  text-align: center;
+  color: #004e92;
+  font-size: 2rem;
+  margin-bottom: 2rem;
+}
+
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1rem;
+}
+
+.gallery-grid img {
+  width: 100%;
+  border-radius: 10px;
+  object-fit: cover;
+  height: 180px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.07);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .principal {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .principal-text h2 {
+    font-size: 1.5rem;
+  }
+
+  .gallery-grid img {
+    height: 150px;
+  }
+}
