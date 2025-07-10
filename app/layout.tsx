@@ -1,6 +1,7 @@
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 import "./styles/globals.css";
+import PageWrapper from "./components/PageWrapper";
 
 export const metadata = {
   title: "Charter School Website",
@@ -15,7 +16,9 @@ export default function RootLayout({
     <html lang="en">
       <body>
         <Navbar />
-        <main>{children}</main>
+        <main>
+          <PageWrapper>{children}</PageWrapper>
+        </main>
         <Footer />
       </body>
     </html>

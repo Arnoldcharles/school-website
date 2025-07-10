@@ -15,6 +15,7 @@ export default function Navbar() {
     { href: "/admissions", label: "Admissions" },
     { href: "/contact", label: "Contact" },
     { href: "/gallery", label: "Gallery" },
+    { href: '/academics', label: 'Academics' },
   ];
 
   // Optional: Close menu when navigating
@@ -25,7 +26,7 @@ export default function Navbar() {
   return (
     <nav className="navbar">
       <div className="nav-inner">
-        <div className="logo">🎓 MySchool</div>
+        <div className="logo animated-logo">🎓 MySchool</div>
 
         <button
           className="hamburger"
@@ -38,15 +39,36 @@ export default function Navbar() {
         </button>
 
         <div className={`nav-links ${menuOpen ? "open" : ""}`}>
-          {links.map((link) => (
-            <Link
-              key={link.href}
-              href={link.href}
-              className={`nav-link ${pathname === link.href ? "active" : ""}`}
-            >
-              {link.label}
-            </Link>
-          ))}
+          {links.map((link) => {
+            if (link.label === "Academics") {
+              return (
+                <div key={link.href} className="dropdown">
+                  <span className="nav-link dropdown-toggle">Academics ▾</span>
+                  <div className="dropdown-menu">
+                    <Link href="/academics/nursery" className="dropdown-item">
+                      Nursery
+                    </Link>
+                    <Link href="/academics/primary" className="dropdown-item">
+                      Primary
+                    </Link>
+                    <Link href="/academics/secondary" className="dropdown-item">
+                      Secondary
+                    </Link>
+                  </div>
+                </div>
+              );
+            }
+
+            return (
+              <Link
+                key={link.href}
+                href={link.href}
+                className={`nav-link ${pathname === link.href ? "active" : ""}`}
+              >
+                {link.label}
+              </Link>
+            );
+          })}
         </div>
       </div>
     </nav>
