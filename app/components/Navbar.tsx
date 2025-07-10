@@ -1,32 +1,38 @@
 "use client";
 
 import Link from "next/link";
-import { useState, useEffect } from "react";
 import { usePathname } from "next/navigation";
+import { useEffect, useState } from "react";
 import "./Navbar.css";
 
 export default function Navbar() {
   const pathname = usePathname();
   const [menuOpen, setMenuOpen] = useState(false);
+  const [dropdownOpen, setDropdownOpen] = useState(false);
 
   const links = [
     { href: "/", label: "Home" },
     { href: "/about", label: "About" },
     { href: "/admissions", label: "Admissions" },
-    { href: "/contact", label: "Contact" },
+    { href: "/academics", label: "Academics" }, // Dropdown
     { href: "/gallery", label: "Gallery" },
-    { href: '/academics', label: 'Academics' },
+    { href: "/contact", label: "Contact" },
   ];
 
-  // Optional: Close menu when navigating
+  // Close menus when navigating
   useEffect(() => {
     setMenuOpen(false);
+    setDropdownOpen(false);
   }, [pathname]);
+
+  const isMobile = typeof window !== "undefined" && window.innerWidth <= 768;
 
   return (
     <nav className="navbar">
       <div className="nav-inner">
-        <div className="logo animated-logo">🎓 MySchool</div>
+        <div className="logo animated-logo">
+          <Link href="/">🎓 MySchool</Link>
+        </div>
 
         <button
           className="hamburger"
@@ -42,9 +48,17 @@ export default function Navbar() {
           {links.map((link) => {
             if (link.label === "Academics") {
               return (
-                <div key={link.href} className="dropdown">
+                <div
+                  key={link.href}
+                  className="dropdown"
+                  onClick={() => isMobile && setDropdownOpen(!dropdownOpen)}
+                  onMouseEnter={() => !isMobile && setDropdownOpen(true)}
+                  onMouseLeave={() => !isMobile && setDropdownOpen(false)}
+                >
                   <span className="nav-link dropdown-toggle">Academics ▾</span>
-                  <div className="dropdown-menu">
+                  <div
+                    className={`dropdown-menu ${dropdownOpen ? "show" : ""}`}
+                  >
                     <Link href="/academics/nursery" className="dropdown-item">
                       Nursery
                     </Link>
