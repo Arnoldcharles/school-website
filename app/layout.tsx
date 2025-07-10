@@ -3,7 +3,7 @@ import Footer from "./components/Footer";
 import "./styles/globals.css";
 
 export const metadata = {
-  title: "Your School Name",
+  title: "Charter School Website",
 };
 
 export default function RootLayout({
