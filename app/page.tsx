@@ -1,35 +1,35 @@
-import TestimonialCard from "./components/TestimonialCard";
+import HeroSlider from './components/HeroSlider';
 
 export default function HomePage() {
   return (
     <div>
-      <img
-        src="/school.jpg"
-        alt="School banner"
-        style={{
-          width: "100%",
-          height: "300px",
-          objectFit: "cover",
-          borderRadius: "8px",
-        }}
-      />
-      <h1>Welcome to Your School</h1>
-      <p>
-        Your School is dedicated to academic excellence and character
-        development. Our students are prepared to thrive in an ever-changing
-        world.
-      </p>
-      <h2>🎓 What Parents Say</h2>
-      <div className="testimonial-grid">
-        <TestimonialCard
-          name="Mrs. Okoro"
-          message="The teachers are passionate and supportive!"
-        />
-        <TestimonialCard
-          name="Mr. Bello"
-          message="My child is thriving here academically and socially."
-        />
-      </div>
+      <HeroSlider />
+
+      <section className="home-section about">
+        <h2>About MySchool</h2>
+        <p>
+          We are committed to nurturing lifelong learners with strong character,
+          creativity, and a love for knowledge. Our school blends academic
+          excellence with a vibrant community.
+        </p>
+      </section>
+
+      <section className="home-section events">
+        <h2>Upcoming Events</h2>
+        <ul>
+          <li>📅 July 15 – Orientation Day for New Students</li>
+          <li>🎓 July 25 – Midterm Parent-Teacher Meeting</li>
+          <li>🏅 August 1 – Inter-house Sports Competition</li>
+        </ul>
+      </section>
+
+      <section className="home-section testimonials">
+        <h2>What Parents Say</h2>
+        <blockquote>
+          “My child has grown so much since joining this school. The teachers are outstanding!”
+        </blockquote>
+        <cite>— Mrs. Adebayo</cite>
+      </section>
     </div>
   );
 }
