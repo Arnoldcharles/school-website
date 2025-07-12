@@ -1,7 +1,7 @@
-'use client';
+"use client";
 
-import { useEffect, useState } from 'react';
-import './ScrollToTop.css';
+import { useEffect, useState } from "react";
+import "./ScrollToTop.css";
 
 export default function ScrollToTop() {
   const [visible, setVisible] = useState(false);
@@ -10,14 +10,14 @@ export default function ScrollToTop() {
     const toggleVisible = () => {
       setVisible(window.scrollY > 300);
     };
-    window.addEventListener('scroll', toggleVisible);
-    return () => window.removeEventListener('scroll', toggleVisible);
+    window.addEventListener("scroll", toggleVisible);
+    return () => window.removeEventListener("scroll", toggleVisible);
   }, []);
 
   return (
     <button
-      className={`scroll-top ${visible ? 'show' : ''}`}
-      onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
+      className={`scroll-top ${visible ? "show" : ""}`}
+      onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
     >
       ⬆
     </button>

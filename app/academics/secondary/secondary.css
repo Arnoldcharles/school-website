@@ -1,0 +1,141 @@
+.secondary-page {
+  padding: 4rem 1.5rem;
+  max-width: 1100px;
+  margin: auto;
+}
+
+/* Hero */
+.secondary-hero {
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-bottom: 4rem;
+}
+
+.hero-text {
+  flex: 1;
+}
+
+.hero-text h1 {
+  font-size: 2.5rem;
+  color: #004e92;
+  margin-bottom: 1rem;
+}
+
+.hero-text p {
+  font-size: 1.2rem;
+  color: #444;
+  line-height: 1.6;
+}
+
+.hero-image img {
+  max-width: 100%;
+  border-radius: 12px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+}
+
+/* About */
+.secondary-about {
+  text-align: center;
+  margin-bottom: 4rem;
+}
+
+.secondary-about h2 {
+  font-size: 2rem;
+  color: #004e92;
+  margin-bottom: 1rem;
+}
+
+.secondary-about p {
+  font-size: 1.1rem;
+  color: #333;
+  max-width: 750px;
+  margin: auto;
+  line-height: 1.7;
+}
+
+/* Highlights */
+.secondary-highlights h2 {
+  text-align: center;
+  color: #004e92;
+  font-size: 2rem;
+  margin-bottom: 2rem;
+}
+
+.highlight-cards {
+  display: flex;
+  gap: 1.5rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.highlight-card {
+  background: #f0f7ff;
+  padding: 1.5rem;
+  border-radius: 10px;
+  width: 280px;
+  text-align: center;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.05);
+  animation: fadeIn 0.6s ease forwards;
+  opacity: 0;
+  transform: translateY(20px);
+}
+
+.highlight-card:nth-child(1) { animation-delay: 0.1s; }
+.highlight-card:nth-child(2) { animation-delay: 0.3s; }
+.highlight-card:nth-child(3) { animation-delay: 0.5s; }
+
+.highlight-card h3 {
+  color: #004e92;
+  margin-bottom: 0.5rem;
+}
+
+.highlight-card p {
+  color: #555;
+  font-size: 0.95rem;
+}
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* CTA */
+.cta-button-wrapper {
+  text-align: center;
+  margin-top: 3rem;
+}
+
+.cta-button {
+  display: inline-block;
+  background: #004e92;
+  color: #fff;
+  padding: 0.9rem 2rem;
+  border-radius: 8px;
+  font-size: 1rem;
+  text-decoration: none;
+  transition: background 0.3s ease;
+}
+
+.cta-button:hover {
+  background: #00346e;
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .secondary-hero {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .hero-text h1 {
+    font-size: 2rem;
+  }
+
+  .highlight-card {
+    width: 100%;
+  }
+}

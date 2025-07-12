@@ -19,6 +19,11 @@ const slides = [
     message: "Excellence in Education & Character",
     button: { text: "Contact Us", link: "/contact" },
   },
+  {
+    image: "/slides/3.jpg",
+    message: "Excellence in Education & Character",
+    button: { text: "Reach out", link: "/contact" },
+  },
 ];
 
 export default function HeroSlider() {
@@ -29,7 +34,7 @@ export default function HeroSlider() {
   useEffect(() => {
     const timer = setInterval(() => {
       nextSlide();
-    }, 6000);
+    }, 3000);
     return () => clearInterval(timer);
   }, []);
 

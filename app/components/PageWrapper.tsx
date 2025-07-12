@@ -1,10 +1,14 @@
-'use client';
+"use client";
 
-import { usePathname } from 'next/navigation';
-import { useEffect, useState } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
+import { usePathname } from "next/navigation";
+import { useEffect, useState } from "react";
+import { motion, AnimatePresence } from "framer-motion";
 
-export default function PageWrapper({ children }: { children: React.ReactNode }) {
+export default function PageWrapper({
+  children,
+}: {
+  children: React.ReactNode;
+}) {
   const pathname = usePathname();
   const [key, setKey] = useState(pathname);
 

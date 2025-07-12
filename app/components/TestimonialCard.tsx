@@ -1,4 +1,10 @@
-export default function TestimonialCard({ name, message }: { name: string; message: string }) {
+export default function TestimonialCard({
+  name,
+  message,
+}: {
+  name: string;
+  message: string;
+}) {
   return (
     <div className="testimonial">
       <p>“{message}”</p>

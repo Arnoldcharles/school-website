@@ -1,11 +1,11 @@
-import NewsletterForm from './NewsletterForm';
+import NewsletterForm from "./NewsletterForm";
 
 export default function Footer() {
   return (
     <footer>
       <NewsletterForm />
-      <p style={{ marginTop: '1rem' }}>
-        &copy; {new Date().getFullYear()} Your School Name. All rights reserved.
+      <p style={{ marginTop: "1rem" }}>
+        &copy; {new Date().getFullYear()} MySchool. All rights reserved.
       </p>
     </footer>
   );

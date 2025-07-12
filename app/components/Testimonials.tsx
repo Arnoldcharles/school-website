@@ -1,20 +1,21 @@
-'use client';
+"use client";
 
-import { useEffect, useState, useRef } from 'react';
-import './Testimonials.css';
+import { useEffect, useState, useRef } from "react";
+import "./Testimonials.css";
 
 const testimonials = [
   {
-    quote: 'My child has grown so much since joining this school. The teachers are outstanding!',
-    author: '— Mrs. Adebayo',
+    quote:
+      "My child has grown so much since joining this school. The teachers are outstanding!",
+    author: "— Mrs. Adebayo",
   },
   {
-    quote: 'A safe, clean, and caring environment where children thrive.',
-    author: '— Mr. Chinedu',
+    quote: "A safe, clean, and caring environment where children thrive.",
+    author: "— Mr. Chinedu",
   },
   {
-    quote: 'Excellent facilities and an amazing academic record.',
-    author: '— Mrs. Oladipo',
+    quote: "Excellent facilities and an amazing academic record.",
+    author: "— Mrs. Oladipo",
   },
 ];
 
@@ -32,7 +33,8 @@ export default function Testimonials() {
   }, []);
 
   const next = () => setIndex((prev) => (prev + 1) % testimonials.length);
-  const prev = () => setIndex((prev) => (prev - 1 + testimonials.length) % testimonials.length);
+  const prev = () =>
+    setIndex((prev) => (prev - 1 + testimonials.length) % testimonials.length);
 
   // Handle swipe
   const handleTouchStart = (e: React.TouchEvent) => {
