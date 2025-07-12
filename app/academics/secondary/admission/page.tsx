@@ -18,7 +18,7 @@ export default function SecondaryAdmission() {
       <section className="form-section">
         <form
           className="secondary-form"
-          action="https://formspree.io/f/YOUR_FORMSPREE_ID"
+          action="https://formspree.io/f/mldnqndo"
           method="POST"
         >
           <div className="form-grid">

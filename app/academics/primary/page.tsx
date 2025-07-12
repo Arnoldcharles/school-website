@@ -47,7 +47,7 @@ export default function PrimaryPage() {
 
       {/* CTA Button */}
       <div className="cta-button-wrapper">
-        <a href="/primary/admission" className="cta-button">
+        <a href="/academics/primary/admission" className="cta-button">
           Apply for Primary Admission
         </a>
       </div>

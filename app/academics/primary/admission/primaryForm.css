@@ -1,0 +1,81 @@
+.primary-form-page {
+  padding: 4rem 1.5rem;
+  max-width: 950px;
+  margin: auto;
+}
+
+.primary-form-header {
+  text-align: center;
+  margin-bottom: 2.5rem;
+}
+
+.primary-form-header h1 {
+  font-size: 2.4rem;
+  color: #0085ca;
+}
+
+.primary-form-header p {
+  font-size: 1.1rem;
+  color: #444;
+  max-width: 680px;
+  margin: auto;
+  line-height: 1.6;
+}
+
+.primary-form-section {
+  background: #f2faff;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
+}
+
+.primary-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.form-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 1rem;
+}
+
+.primary-form input,
+.primary-form textarea {
+  padding: 1rem;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+}
+
+.primary-form textarea {
+  min-height: 120px;
+  resize: vertical;
+}
+
+.primary-form button {
+  align-self: flex-start;
+  background: #0085ca;
+  color: white;
+  padding: 0.9rem 2rem;
+  font-size: 1rem;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.primary-form button:hover {
+  background: #0071ab;
+}
+
+@media (max-width: 768px) {
+  .primary-form-header h1 {
+    font-size: 2rem;
+  }
+
+  .primary-form button {
+    align-self: center;
+  }
+}
